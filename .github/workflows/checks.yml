@@ -1,0 +1,41 @@
+name: PR Checks for Any Batch
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  file_checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Validate directory structure
+        run: |
+          batch_folder=$(ls -d */ | grep -E 'Batch[0-9]+')
+          if [ -z "$batch_folder" ]; then
+            echo "Error: No batch directory found." >&2
+            exit 1
+          fi
+          if [ ! -d "$batch_folder/LessonMaterials" ]; then
+            echo "Error: LessonMaterials directory missing in $batch_folder." >&2
+            exit 1
+          fi
+          if [ ! -d "$batch_folder/Assignments" ]; then
+            echo "Error: Assignments directory missing in $batch_folder." >&2
+            exit 1
+          fi
+          if [ ! -d "$batch_folder/Comments" ]; then
+            echo "Error: Comments directory missing in $batch_folder." >&2
+            exit 1
+          fi
+
+      - name: Check file naming conventions
+        run: |
+          for file in $(git diff --name-only origin/main); do
+            if [[ ! "$file" =~ ^Batch[0-9]+/(LessonMaterials|Assignments|Comments)/[a-zA-Z0-9_.-]+$ ]]; then
+              echo "Error: Invalid file name or path $file" >&2
+              exit 1
+            fi
+          done
