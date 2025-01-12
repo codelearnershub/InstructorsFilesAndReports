@@ -1,0 +1,24 @@
+name: Notify Admins on New PR
+
+on:
+  pull_request:
+    types: [opened, reopened, review_requested, review]
+
+jobs:
+  notify_admin:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send notification to admins
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const adminUsername = 'nurudeenadeyemi'; // Replace with actual admin GitHub username
+            const prTitle = context.payload.pull_request.title;
+            const prUrl = context.payload.pull_request.html_url;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              body: `@${adminUsername} A new pull request titled "${prTitle}" has been opened: ${prUrl}`
+            });
