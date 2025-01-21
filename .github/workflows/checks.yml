@@ -11,25 +11,27 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Validate directory structure
+      - name: Validate directory structure for modified batches
         run: |
-          batch_folder=$(ls -d */ | grep -E 'Batch[0-9]+')
-          if [ -z "$batch_folder" ]; then
-            echo "Error: No batch directory found." >&2
-            exit 1
+          modified_batches=$(git diff --name-only origin/main | grep -oE '^Batch[0-9]+' | uniq)
+          if [ -z "$modified_batches" ]; then
+            echo "No batch directories modified."
+            exit 0
           fi
-          if [ ! -d "$batch_folder/LessonMaterials" ]; then
-            echo "Error: LessonMaterials directory missing in $batch_folder." >&2
-            exit 1
-          fi
-          if [ ! -d "$batch_folder/Assignments" ]; then
-            echo "Error: Assignments directory missing in $batch_folder." >&2
-            exit 1
-          fi
-          if [ ! -d "$batch_folder/Comments" ]; then
-            echo "Error: Comments directory missing in $batch_folder." >&2
-            exit 1
-          fi
+          for batch in $modified_batches; do
+            if [ ! -d "$batch/LessonMaterials" ]; then
+              echo "Error: LessonMaterials directory missing in $batch." >&2
+              exit 1
+            fi
+            if [ ! -d "$batch/Assignments" ]; then
+              echo "Error: Assignments directory missing in $batch." >&2
+              exit 1
+            fi
+            if [ ! -d "$batch/Comments" ]; then
+              echo "Error: Comments directory missing in $batch." >&2
+              exit 1
+            fi
+          done
 
       - name: Check file naming conventions
         run: |
