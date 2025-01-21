@@ -1,0 +1,5 @@
+We developed a console-based registration portal for CLH, and the code has been zipped and shared in the Batch 25 WhatsApp group. 
+Students are expected to complete and submit it by Wednesday, January 22, 2025. Following this, they will begin working on their personal console applications,
+which they will present on Wednesday, January 29, 2025.
+
+https://github.com/codelearnershub/clhRegApp.git
