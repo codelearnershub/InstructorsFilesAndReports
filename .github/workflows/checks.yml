@@ -13,23 +13,25 @@ jobs:
 
       - name: Validate directory structure
         run: |
-          batch_folder=$(ls -d */ | grep -E 'Batch[0-9]+')
-          if [ -z "$batch_folder" ]; then
+          batch_folders=$(ls -d */ | grep -E 'Batch[0-9]+')
+          if [ -z "$batch_folders" ]; then
             echo "Error: No batch directory found." >&2
             exit 1
           fi
-          if [ ! -d "$batch_folder/LessonMaterials" ]; then
-            echo "Error: LessonMaterials directory missing in $batch_folder." >&2
-            exit 1
-          fi
-          if [ ! -d "$batch_folder/Assignments" ]; then
-            echo "Error: Assignments directory missing in $batch_folder." >&2
-            exit 1
-          fi
-          if [ ! -d "$batch_folder/Comments" ]; then
-            echo "Error: Comments directory missing in $batch_folder." >&2
-            exit 1
-          fi
+          for batch_folder in $batch_folders; do
+            if [ ! -d "$batch_folder/LessonMaterials" ]; then
+              echo "Error: LessonMaterials directory missing in $batch_folder." >&2
+              exit 1
+            fi
+            if [ ! -d "$batch_folder/Assignments" ]; then
+              echo "Error: Assignments directory missing in $batch_folder." >&2
+              exit 1
+            fi
+            if [ ! -d "$batch_folder/Comments" ]; then
+              echo "Error: Comments directory missing in $batch_folder." >&2
+              exit 1
+            fi
+          done
 
       - name: Check file naming conventions
         run: |
