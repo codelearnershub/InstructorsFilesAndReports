@@ -1,0 +1,118 @@
+
+FILE HANDLING (BATCH-25) Thursday-23-01-2025.
+Introduction
+
+File Handling Is one of the fundamental aspect of data management. Is the process of creating, writing, 
+reading and organizing files on the computer. Understanding File handling is very essential whether in software development or 
+organizing documents.
+
+Goal
+
+1 Students will learn how to effectively manage and organize data which is crucial in programming and data analysis.
+2 By learning file handling student should be able to gain practical skills in creating, reading, writing and modifying files.
+3 Teaches students how to handle errors and exceptions relating to file which will enhance their problem-solving skill and creative thinking.     
+            
+Teaching Plan/Objectives to achieve the above Stated Goal
+
+At the end of the class the student should understand:
+1 What is a Directory and how to Create a Directory in c#.
+
+  Material:
+  Udemy video. 
+  YouTube video. 
+  Dotnet tutorial. 
+  internet.
+  Fundamentals-of-Computer-Programming-with-CSharp-Nakov-eBook-v2013.pdf.
+
+2 What is a File and how to Create a File in c#.
+
+  Material:
+  Udemy video.
+  Utube video. 
+  Dotnet tutorial.
+
+3 What is a Stream: Input/Output Stream.
+	
+  Material:
+  Udemy video.
+  youTube video. 
+  dotnet tutorial.
+  internet.
+
+4 What is an Absolute & Relative Paths.
+
+  Material:
+  internet.
+
+5 How to get the Current Working Directory.
+
+  Material:
+  youTube video.
+
+6 File Handling in c#: Reading, Writing and Modifying of File
+
+  Material
+  youTube video.
+  internet.
+  dotnet tutorial.
+  Udemy video.
+  
+7 System.IO Namespace in c#.
+
+  Material
+  internet.
+  dotnet tutorial.
+
+8 What the File Class is in c#: Method such as WriteAllText, WriteAllLines, ReadAllLines, AppendAllText Close etc.
+
+  Material
+  youTube video.
+  internet.
+  dotnet tutorial.
+  Udemy video.
+
+9 What the StreamWriter Class is in c#: Method such as Writeline, Close etc.
+
+  Material
+  youTube video.
+  internet.
+  dotnet tutorial.
+  Udemy video.
+  Fundamentals-of-Computer-Programming-with-CSharp-Nakov-eBook-v2013.pdf.
+
+10 What the StreamReader Class is in c#: Method such as ReadAllLine, ReadToEnd, CLose etc
+
+  Material
+  youTube video.
+  internet.
+  dotnet tutorial.
+  Udemy video.
+  
+
+12 What the FileInfo Class is in c#: Methods such as Fullname, DirectoryName, Name, Extension, Length etc.
+
+  Material:
+  youTube video.
+  Udemy video.
+
+13 Importance of using the using Key word in File Handling
+   
+   Material:
+   youTube video.
+   udemy video.
+   internet.
+
+14 Errors and Exception related to File Handling.
+
+   Material:
+   dotnet tutorials. 
+   youTube video.
+
+15 Practical Examples will be provided with code
+
+   
+
+
+
+
+                                                                                          
