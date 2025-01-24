@@ -1,0 +1,67 @@
+
+Arithmetic Operation in c# (Batch 26)
+Date: 21/01/2025
+
+Introduction:
+
+In C#, operators are special symbols that perform operations on variables and values. 
+They are essential for manipulating data and performing calculations in your programs. 
+Operators form the foundation of any programming language.The functionality of c# language is incomplete without the use of operators.
+Operators can be categorized into several types, with arithmetic operators being one of the most commonly used categories.
+
+
+Goal of this course:
+
+Operators are fundamental to performing calculations and manipulating data.
+Teaching them helps students understand how to perform basic arithmetic operations, which are essential for any programming task.
+Learning about operators encourages logical thinking and problem-solving skills. 
+Students will learn to break down problems into smaller parts and use operators to manipulate data effectively
+
+Teaching Plan:
+
+1 What Operators are
+
+	Materials used:
+	Dotnet tutorial.
+	Fundamentals-of-Computer-Programming-with-CSharp-Nakov-eBook-v2013.pdf.
+	internet
+
+2 Categories of Operators 
+
+	Materials used:
+	Dotnet tutorial.
+	Fundamentals-of-Computer-Programming-with-CSharp-Nakov-eBook-v2013.pdf.
+	internet
+
+3 Arithmetical Operators:
+	- Addition operator (+).
+	- Multiplication operator (*).
+	- Subtraction operator (-).
+	- Division operator (/).
+	- Modulus operator (%).
+	- Increment operator (a++) Postfix.
+	- Decrement operator (a--) Postfix.
+	- Prefix Incement operator (++a).
+	- Prefix Decrement operator (--a).
+
+	Materials used:
+	Dotnet tutorial.
+	Fundamentals-of-Computer-Programming-with-CSharp-Nakov-eBook-v2013.pdf.
+	internet
+
+4 Using Addition operator (+) on string
+
+	Materials used:
+	Dotnet tutorial.
+	Fundamentals-of-Computer-Programming-with-CSharp-Nakov-eBook-v2013.pdf.
+	internet
+
+5 What Unary, Binary and Tenary operators are
+
+	Materials used:
+	Dotnet tutorial.
+	Fundamentals-of-Computer-Programming-with-CSharp-Nakov-eBook-v2013.pdf.
+
+5 Practical examples will be provided with code
+	
+
