@@ -1,0 +1,95 @@
+Generic_list
+
+
+Generic List
+
+Lesson Outline
+1. Introduction to Generic Lists 
+What is List<T>?
+
+A dynamic, type-safe collection in System.Collections.Generic.
+
+Replaces legacy ArrayList with type safety and better performance.
+
+Why use List<T> over arrays?
+
+Dynamically resizes (no fixed capacity).
+
+Built-in methods for adding, removing, and searching elements.
+
+2. Creating and Initializing Lists
+Ways to initialize a List<T>:
+
+Empty list: List<string> names = new List<string>();
+
+With initial values: List<int> primes = new List<int> { 2, 3, 5, 7 };
+
+From an array: int[] arr = { 1, 2, 3 }; List<int> list = new List<int>(arr);
+
+Key Properties:
+
+Count: Number of elements.
+
+Capacity: Internal storage size (automatically adjusted).
+
+3. Basic Operations on Lists
+Adding Elements:
+
+Add(T item): Appends an element.
+
+AddRange(IEnumerable<T> collection): Adds multiple elements.
+
+Removing Elements:
+
+Remove(T item): Deletes the first occurrence of item.
+
+RemoveAt(int index): Removes element at index.
+
+Clear(): Empties the list.
+
+Accessing Elements:
+
+Indexer: list[0] (throws ArgumentOutOfRangeException if invalid).
+
+Contains(T item): Checks if an element exists.
+
+4. Iterating Through a List
+Methods for iteration:
+
+for loop: Access elements by index.
+
+foreach loop: Iterate without index.
+
+5. Practical Use Cases 
+When to use List<T>:
+
+Storing dynamic data (e.g., user inputs, database results).
+
+Replacing arrays when flexibility is needed.
+
+Real-world example:
+
+Managing a list of products in an e-commerce cart.
+
+6. Common Pitfalls and Best Practices 
+Pitfalls:
+
+Index out-of-range errors.
+
+Overusing List<T> when other collections (e.g., Dictionary, HashSet) are more efficient.
+
+Best Practices:
+
+Prefer foreach for iteration (avoids index errors).
+
+Set initial capacity if size is known (improves performance):
+
+List<int> bigList = new List<int>(1000); // Pre-allocates memory  
+
+
+Assessment 
+Write code to reverse the elements of a List<string>.
+
+Explain the difference between List<T> and an array.
+
+Given two lists of same type, merge the two lists without duplicates
