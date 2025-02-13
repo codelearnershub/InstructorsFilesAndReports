@@ -1,0 +1,85 @@
+
+
+			Introduction to String in c#.
+		Understanding String Representation and Operation.
+
+Lesson Date: 21/01/2025
+
+Introduction
+Strings are one of the most fundamental data types in programming, serving as the backbone for text manipulation 
+and representation in various applications. In C#, a string is defined as a sequence of characters, which can include letters,
+numbers, symbols, and whitespace. The ability to work with strings effectively is crucial for tasks such as user input handling, 
+data processing, and output formatting.
+
+In C#, strings are represented by the System.String class, which provides a rich set of methods and properties for string manipulation.
+This class allows developers to perform a wide range of operations, including concatenation, comparison, searching, and formatting. 
+Understanding how strings are represented and the operations that can be performed on them is essential for writing efficient and effective C# code.
+
+
+Goal of this Topic:
+
+To provide students with a solid foundation in the concept of strings, including their definition, characteristics,
+and importance in programming.
+To enable students to perform various string operations, such as concatenation, substring extraction, searching, 
+and formatting, thereby enhancing their ability to manipulate text data effectively.
+To help students grasp the concept of string immutability in C#, which is crucial for writing efficient code and understanding memory management.
+
+Lesson Plan and Objectives to achieve the above stated goal
+
+1 What string is.
+
+	Materials used:
+	Fundamentals-of-Computer-Programming-with-CSharp-Nakov-eBook-v2013.pdf.
+	Dotnet tutorials.
+
+2 What System.String Class is
+
+	Materials used:
+	Fundamentals-of-Computer-Programming-with-CSharp-Nakov-eBook-v2013.pdf.
+	Dotnet tutorials.
+
+3 How to declare a string
+
+	Materials used:
+	Fundamentals-of-Computer-Programming-with-CSharp-Nakov-eBook-v2013.pdf.
+	Dotnet tutorials.
+
+4 String(string capital letter S) vs string (small letter s)
+
+	Materials used:
+	Fundamentals-of-Computer-Programming-with-CSharp-Nakov-eBook-v2013.pdf.
+	Dotnet tutorials.
+
+5 Why strings are Immutable
+
+	Materials used:
+	Fundamentals-of-Computer-Programming-with-CSharp-Nakov-eBook-v2013.pdf.
+	Dotnet tutorials.
+	Internet.
+
+6 Types of memory
+
+	Materials used:
+ 	Fundamentals-of-Computer-Programming-with-CSharp-Nakov-eBook-v2013.pdf.
+	Dotnet tutorials.
+
+7 Garbage Collector
+
+	Materials used:
+	Fundamentals-of-Computer-Programming-with-CSharp-Nakov-eBook-v2013.pdf.
+	Dotnet tutorials.
+	Udemy video
+
+8 Fundamentals of Garbage collection
+	
+	Materials used:
+	Fundamentals-of-Computer-Programming-with-CSharp-Nakov-eBook-v2013.pdf.
+	Dotnet tutorials.
+	Udemy video
+
+9 Strings Operations and Manipulations
+
+	Materials used:
+	Fundamentals-of-Computer-Programming-with-CSharp-Nakov-eBook-v2013.pdf.
+
+10 Pratical examples will be provided with code.

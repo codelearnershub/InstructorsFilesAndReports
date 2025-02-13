@@ -1,0 +1,10 @@
+		
+			Assignment (Batch 25)
+
+Question(Date): 23-01-2025.
+
+Write to and Read object from file using Student class as an example.
+Student should have an Id, Firstname, Lastname, Fullname, Email, Password, Age, DateOfBirth.
+
+Submition Date: 29-01-2025.
+
