@@ -1,0 +1,32 @@
+		
+
+Assignment
+Date Given : 21/01/2025
+
+Question:
+
+ 1 Complete all exercises in chapter 3 of Fundamentals-of-Computer-Programming-with-CSharp-Nakov-eBook-v2013.pdf.
+
+ 2 Area of a Triangle:
+   write a c# program that calculates the area of a triangle with a base of 10 units and a height of 5 units.
+   Formula Area = (1/2) * base * height.
+   
+
+ 3 Write a C# program that prompts the user to input their first name and last name, and then prints the full name.
+
+ 4 Write a C# program that calculates the area of a rectangle with a length of 8 units and a width of 4 units.
+   Formula: Area = length * width.
+
+ 5 Perimeter of a circle(circumference):
+   Write a C# program that calculates the circumference of a circle with a radius of 7 units. Use π (pi) = 3.142.
+   Formula: Circumference = 2 * π * radius.
+  
+ 6 Write a C# program that attempts to divide a user-provided input by zero and catches the exception that occurs. Display the exception message.
+
+ 7 Write a C# program that prints the remainder when 100 is divided by 80.
+
+ 8 Write a C# program that calculates the volume of a cylinder with a radius of 3 units and a height of 5 units. Use π (pi) = 3.142.
+   Formula: Volume = π * radius² * height.
+
+
+Submission Date: 27-01-2025
