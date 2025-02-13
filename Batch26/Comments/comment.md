@@ -1,0 +1,1 @@
+The students are highly attentive and have a strong understanding of the concepts. They can all read from and write to files with precision. However, two students, Abubakr and Usman, are still facing some difficulties and require additional support to fully grasp the topic.
