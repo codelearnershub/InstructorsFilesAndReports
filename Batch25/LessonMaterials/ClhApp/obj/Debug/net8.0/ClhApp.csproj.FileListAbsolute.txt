@@ -1,0 +1,14 @@
+C:\Users\Oluwaseun\Desktop\ClhApp\bin\Debug\net8.0\ClhApp.exe
+C:\Users\Oluwaseun\Desktop\ClhApp\bin\Debug\net8.0\ClhApp.deps.json
+C:\Users\Oluwaseun\Desktop\ClhApp\bin\Debug\net8.0\ClhApp.runtimeconfig.json
+C:\Users\Oluwaseun\Desktop\ClhApp\bin\Debug\net8.0\ClhApp.dll
+C:\Users\Oluwaseun\Desktop\ClhApp\bin\Debug\net8.0\ClhApp.pdb
+C:\Users\Oluwaseun\Desktop\ClhApp\obj\Debug\net8.0\ClhApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Oluwaseun\Desktop\ClhApp\obj\Debug\net8.0\ClhApp.AssemblyInfoInputs.cache
+C:\Users\Oluwaseun\Desktop\ClhApp\obj\Debug\net8.0\ClhApp.AssemblyInfo.cs
+C:\Users\Oluwaseun\Desktop\ClhApp\obj\Debug\net8.0\ClhApp.csproj.CoreCompileInputs.cache
+C:\Users\Oluwaseun\Desktop\ClhApp\obj\Debug\net8.0\ClhApp.dll
+C:\Users\Oluwaseun\Desktop\ClhApp\obj\Debug\net8.0\refint\ClhApp.dll
+C:\Users\Oluwaseun\Desktop\ClhApp\obj\Debug\net8.0\ClhApp.pdb
+C:\Users\Oluwaseun\Desktop\ClhApp\obj\Debug\net8.0\ClhApp.genruntimeconfig.cache
+C:\Users\Oluwaseun\Desktop\ClhApp\obj\Debug\net8.0\ref\ClhApp.dll
