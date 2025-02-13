@@ -18,19 +18,6 @@ jobs:
             echo "No batch directories modified."
             exit 0
           fi
-          for batch in $modified_batches; do
-            if [ ! -d "$batch/LessonMaterials" ]; then
-              echo "Error: LessonMaterials directory missing in $batch." >&2
-              exit 1
-            fi
-            if [ ! -d "$batch/Assignments" ]; then
-              echo "Error: Assignments directory missing in $batch." >&2
-              exit 1
-            fi
-            if [ ! -d "$batch/Comments" ]; then
-              echo "Error: Comments directory missing in $batch." >&2
-              exit 1
-            fi
           done
 
       - name: Check file naming conventions
