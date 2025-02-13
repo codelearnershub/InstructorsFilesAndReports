@@ -1,0 +1,88 @@
+Learning Objectives
+
+By the end of this lesson, students will be able to:
+
+Define abstraction and explain its role in OOP.
+
+Use interfaces to enforce abstraction in code.
+
+Design systems where implementation details are hidden behind contracts.
+
+1. Introduction to Abstraction 
+What is Abstraction?
+
+Definition: Hiding complex implementation details and exposing only essential features.
+
+Real-World Analogy: A car’s steering wheel (you don’t need to know how the engine works to drive).
+
+Why Use Abstraction?
+
+Reduces complexity.
+
+Promotes modularity and reusability.
+
+Allows focusing on "what" an object does, not "how."
+
+2. Interfaces as Tools for Abstraction 
+What is an Interface?
+
+A contract that defines what a class must do (methods/properties), not how.
+
+Example: IVehicle interface with StartEngine() and Accelerate() methods.
+
+Key Features of Interfaces:
+
+No implementation logic (only method signatures).
+
+Classes implement interfaces to fulfill the contract.
+
+Enforces consistency across unrelated classes.
+
+Code Example (C#):
+
+// Define an interface  
+public interface IVehicle  
+{  
+    void StartEngine();  
+    void Accelerate(int speed);  
+}  
+
+// Implement the interface in a class  
+public class Car : IVehicle  
+{  
+    public void StartEngine()  
+    {  
+        Console.WriteLine("Car engine started.");  
+    }  
+
+    public void Accelerate(int speed)  
+    {  
+        Console.WriteLine($"Car accelerating to {speed} km/h.");  
+    }  
+}  
+
+3. Hands-On Activity: Building an Abstract System 
+Scenario: Design a payment processing system where payment methods (CreditCard, PayPal) hide their internal logic
+
+https://github.com/Iammurphyleo/AbstractionUsingInterface
+
+4. Group Discussion: Benefits of Interface-Based Abstraction 
+How does this design simplify adding new payment methods (e.g., Bitcoin)?
+
+What happens if a class doesn’t implement all interface methods? (Compiler error!)
+
+How does abstraction promote loose coupling?
+
+5. Common Mistakes & Best Practices
+Mistakes to Avoid:
+
+Defining interfaces with too many methods (violates the Interface Segregation Principle).
+
+Exposing internal logic in the interface.
+
+Best Practices:
+
+Name interfaces with I prefixes (e.g., IPaymentProcessor).
+
+Use interfaces to define roles, not implementation.
+
