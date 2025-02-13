@@ -1,0 +1,8 @@
+Homework
+Task:
+
+Create a Shape base class with CalculateArea() (marked virtual).
+
+Derive Circle and Rectangle classes, overriding CalculateArea().
+
+Create a list of Shape objects and call CalculateArea() polymorphically.
