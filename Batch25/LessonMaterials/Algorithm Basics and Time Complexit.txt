@@ -1,0 +1,78 @@
+Algorithm Basics and Time Complexity
+
+Introduction to Algorithms
+An algorithm is a step-by-step procedure or formula for solving a problem. It serves as a blueprint for tasks ranging from simple calculations to complex data processing.
+
+Characteristics of a Good Algorithm
+1. Clarity: Each step is clear and unambiguous.
+2. Finiteness: Must terminate after a finite number of steps.
+3. Input: Takes input values (if necessary).
+4. Output: Produces at least one output.
+5. Efficiency: Makes optimal use of resources like time and memory.
+
+---
+
+Time Complexity
+Time complexity measures the amount of time an algorithm takes to complete as a function of the input size (‘n’). It is used to evaluate the efficiency of algorithms.
+
+Why is Time Complexity Important?
+1. Helps compare algorithms for performance.
+2. Determines the feasibility of algorithms for large inputs.
+
+Big-O Notation
+Big-O notation describes the upper bound of an algorithm's running time. It represents the worst-case scenario.
+
+Common Notations:
+1. O(1) – Constant Time**: Execution time is independent of input size.
+   - Example: Accessing an element in an array.
+2. O(n) – Linear Time**: Execution time grows linearly with input size.
+   - Example: Searching for an element in an unsorted list.
+3. O(log n) – Logarithmic Time**: Execution time grows logarithmically. Very efficient for large inputs.
+   - Example: Binary search on a sorted array.
+4. O(n²) – Quadratic Time**: Execution time grows quadratically. Common in nested loops.
+   - Example: Comparing all pairs of elements.
+5. O(2ⁿ) – Exponential Time**: Execution time doubles with each additional input. Only feasible for small inputs.
+   - Example: Solving the Tower of Hanoi.
+
+---
+
+Examples of Time Complexity with Actual Time
+Assume a computer can perform 1 million operations per second (1 operation = 1 microsecond).
+
+O(1) – Constant Time
+- Scenario: Fetching an element from an array.
+- Observation: Time remains the same regardless of input size.
+
+O(n) – Linear Time
+- Scenario: Searching for an element in an unsorted array.
+- Observation: Time grows directly with input size.
+
+O(log n) – Logarithmic Time
+- Scenario: Binary search in a sorted array.
+- Observation: Logarithmic growth is highly efficient.
+
+O(n²) – Quadratic Time
+- Scenario: Nested loops comparing all pairs of elements.
+- Observation: Becomes impractical for large inputs.
+
+O(2ⁿ) – Exponential Time
+- Scenario: Recursive Fibonacci calculation.
+- Observation: Exponential algorithms are impractical for large inputs.
+
+---
+
+
+Comparison of Linear Search and Binary Search
+
+| Aspect                   | Linear Search           | Binary Search             |
+|--------------------------|-------------------------|---------------------------|
+| Time Complexity          | O(n)                    | O(log n)                  |
+| Input Requirement        | Unsorted or Sorted      | Sorted                    |
+| Efficiency               | Slower for large inputs | Faster for large inputs   |
+| Implementation Simplicity| Simple                  | Slightly complex          |
+
+---
+
+Conclusion
+Understanding algorithm basics and time complexity is crucial for writing efficient code. Different algorithms serve different purposes, and choosing the right one depends on the problem at hand and the constraints on time and resources.
+
