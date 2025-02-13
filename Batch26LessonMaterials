@@ -1,88 +1,118 @@
 Learning Objectives
-
 By the end of this lesson, students will be able to:
 
-Define abstraction and explain its role in OOP.
+Define inheritance and explain its role in code reuse and hierarchy modeling.
 
-Use interfaces to enforce abstraction in code.
+Implement inheritance using base and derived classes.
 
-Design systems where implementation details are hidden behind contracts.
+Identify scenarios where inheritance is appropriate.
 
-1. Introduction to Abstraction 
-What is Abstraction?
+1. Introduction to Inheritance (10 minutes)
+What is Inheritance?
 
-Definition: Hiding complex implementation details and exposing only essential features.
+Definition: A mechanism where a class (derived/child class) inherits properties and methods from another class (base/parent class).
 
-Real-World Analogy: A car’s steering wheel (you don’t need to know how the engine works to drive).
+Real-World Analogy:
 
-Why Use Abstraction?
+A "Vehicle" class can have derived classes like "Car" and "Bicycle," which inherit common traits (e.g., Speed, Wheels) but add unique features.
 
-Reduces complexity.
+Why Use Inheritance?
 
-Promotes modularity and reusability.
+Promotes code reuse.
 
-Allows focusing on "what" an object does, not "how."
+Models "is-a" relationships (e.g., a Dog is a Mammal).
 
-2. Interfaces as Tools for Abstraction 
-What is an Interface?
+Supports polymorphism (treating derived classes as their base type).
 
-A contract that defines what a class must do (methods/properties), not how.
+2. Key Concepts & Syntax (15 minutes)
+Base and Derived Classes
 
-Example: IVehicle interface with StartEngine() and Accelerate() methods.
-
-Key Features of Interfaces:
-
-No implementation logic (only method signatures).
-
-Classes implement interfaces to fulfill the contract.
-
-Enforces consistency across unrelated classes.
-
-Code Example (C#):
-
-// Define an interface  
-public interface IVehicle  
+// Base class  
+public class Vehicle  
 {  
-    void StartEngine();  
-    void Accelerate(int speed);  
+    public int Speed { get; set; }  
+    public void StartEngine() => Console.WriteLine("Engine started.");  
 }  
 
-// Implement the interface in a class  
-public class Car : IVehicle  
+// Derived class  
+public class Car : Vehicle  
 {  
-    public void StartEngine()  
-    {  
-        Console.WriteLine("Car engine started.");  
-    }  
+    public int NumberOfDoors { get; set; }  
+} 
 
-    public void Accelerate(int speed)  
+3. Hands-On Activity: Building a Class Hierarchy 
+Scenario: Model a system for a zoo with different types of animals.
+
+Step 1: Define the Base Class
+
+public class Animal  
+{  
+    public string Name { get; set; }  
+    public virtual void Eat() => Console.WriteLine($"{Name} is eating.");  
+}  
+
+Step 2: Create Derived Classes
+
+public class Lion : Animal  
+{  
+    public override void Eat() => Console.WriteLine($"{Name} devours meat!");  
+}  
+
+public class Giraffe : Animal  
+{  
+    public override void Eat() => Console.WriteLine($"{Name} munches on leaves.");  
+}  
+
+public class Zoo  
+{  
+    public void FeedAnimals(List<Animal> animals)  
     {  
-        Console.WriteLine($"Car accelerating to {speed} km/h.");  
+        foreach (var animal in animals)  
+        {  
+            animal.Eat();  
+        }  
     }  
 }  
 
-3. Hands-On Activity: Building an Abstract System 
-Scenario: Design a payment processing system where payment methods (CreditCard, PayPal) hide their internal logic
+var zoo = new Zoo();  
+var animals = new List<Animal>  
+{  
+    new Lion { Name = "Simba" },  
+    new Giraffe { Name = "Melman" }  
+};  
 
-https://github.com/Iammurphyleo/AbstractionUsingInterface
+zoo.FeedAnimals(animals);  
 
-4. Group Discussion: Benefits of Interface-Based Abstraction 
-How does this design simplify adding new payment methods (e.g., Bitcoin)?
+4. Group Discussion: When to Use Inheritance 
+How does inheritance reduce redundant code?
 
-What happens if a class doesn’t implement all interface methods? (Compiler error!)
+What are the limitations of deep inheritance hierarchies?
 
-How does abstraction promote loose coupling?
+How does inheritance differ from composition? 
+
+A simple project to depict how constructor works during inherence was implemented
+
+https://github.com/Iammurphyleo/Implementing-Inheritance
 
 5. Common Mistakes & Best Practices
 Mistakes to Avoid:
 
-Defining interfaces with too many methods (violates the Interface Segregation Principle).
+Overusing inheritance (e.g., forcing a "Square is a Rectangle" relationship).
 
-Exposing internal logic in the interface.
+Forgetting to mark base methods as virtual or derived methods as override.
 
 Best Practices:
 
-Name interfaces with I prefixes (e.g., IPaymentProcessor).
+Use inheritance for true hierarchical relationships (e.g., Dog is a Animal).
 
-Use interfaces to define roles, not implementation.
+Follow the Liskov Substitution Principle: Derived classes must be substitutable for their base class.
+
+Prefer composition over inheritance for loosely coupled designs.
+
+Additional Resources
+Book: Head First Object-Oriented Analysis and Design (Inheritance Chapter).
+
+Video: Liskov Substitution Principle Explained (YouTube).
+
+Online Practice: Codewars OOP Challenges.
 

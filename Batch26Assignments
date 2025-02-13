@@ -1,8 +1,8 @@
 Homework
 Task:
 
-Create an INotificationService interface with SendNotification(string message).
+Create a Shape base class with CalculateArea() (marked virtual).
 
-Implement it in EmailNotification and SMSNotification classes.
+Derive Circle and Rectangle classes, overriding CalculateArea().
 
-Write a client class that sends notifications without knowing the underlying channel.
+Create a list of Shape objects and call CalculateArea() polymorphically.
