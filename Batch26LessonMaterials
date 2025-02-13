@@ -1,0 +1,119 @@
+1. Introduction to Dictionaries 
+What is a Dictionary?
+
+A collection of key-value pairs where each key is unique.
+
+Analogy: Real-life dictionary (word = key, definition = value).
+
+Use cases: Lookup tables, caching, counting occurrences.
+
+Key Features:
+
+Fast O(1) lookups (on average).
+
+Keys must be unique and immutable; values can be any type.
+
+2. Creating and Initializing Dictionaries 
+Syntax: Dictionary<TKey, TValue>
+
+Declaration
+Dictionary<string, int> ages = new Dictionary<string, int>();
+
+ Initialization with values
+Dictionary<string, int> grades = new Dictionary<string, int>()
+{
+    {"Alice", 90},
+    {"Bob", 85}
+};
+
+Key Points:
+
+Use var for shorthand: var capitals = new Dictionary<string, string>();
+
+Demonstrate Add() method and collection initializers
+
+3. Basic Operations 
+
+Adding Elements
+grades.Add("Charlie", 88); // Throws error if key exists
+grades["Dave"] = 92;       // Adds or updates
+
+Accessing Values:
+int aliceGrade = grades["Alice"]; // Throws KeyNotFoundException if missing
+if (grades.ContainsKey("Bob"))  // Safe check
+{  
+    int bobGrade = grades["Bob"];
+}
+
+Updating/Removing:
+grades["Alice"] = 95; // Update
+grades.Remove("Bob"); // Returns true/false if removed
+grades.Clear();       // Remove all entries
+
+4. Iterating Through Dictionaries 
+
+Using KeyValuePair<TKey, TValue>:
+foreach (KeyValuePair<string, int> entry in grades)
+{
+    Console.WriteLine($"{entry.Key}: {entry.Value}");
+}
+
+Keys/Values Collections:
+foreach (string name in grades.Keys) { ... }
+foreach (int score in grades.Values) { ... }
+
+5. Common Methods and Properties 
+Properties:
+
+Count: Total key-value pairs.
+
+Methods:
+
+TryGetValue(key, out value): Safely retrieve values.
+
+ContainsKey(key)/ContainsValue(value)
+
+Practical Use Cases 
+Example 1: Phone Book
+
+var phoneBook = new Dictionary<string, string>();
+phoneBook["Alice"] = "123-4567";
+phoneBook["Bob"] = "890-1234";
+
+7. Performance and Best Practices 
+O(1) Complexity: Emphasize speed for lookups.
+
+Choosing Keys: Use immutable types (e.g., string, int).
+
+
+8. Hands-On Exercises
+Basic Operations:
+
+Create a dictionary of product prices. Add, update, and remove entries.
+
+Word Frequency Counter:
+
+Write a program that counts occurrences of words in a text.
+
+Error Handling:
+
+Handle KeyNotFoundException using ContainsKey or TryGetValue.
+
+9. Assessment 
+Quiz:
+
+Which method adds a key-value pair to a dictionary?
+a) Add() b) Insert() c) Push()
+
+What happens if you add a duplicate key with Add()?
+a) Overwrites value b) Compiler error c) Runtime exception
+
+Code Review: Evaluate student solutions for the word counter exercise.
+
+10. Summary & Resources (5 minutes)
+Recap: Dictionaries enable fast key-value lookups; keys are unique.
+
+Resources:
+
+Microsoft Docs: Dictionary<TKey,TValue>
+

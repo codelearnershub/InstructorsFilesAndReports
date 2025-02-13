@@ -1,0 +1,32 @@
+Here are 10 theory questions involving calculations using dictionary in C#:
+
+1. Basic Dictionary Calculation
+Given a dictionary studentGrades with student names as keys and their grades as values, write a C# code snippet to calculate the average grade.
+
+2. Sum of Values
+Create a dictionary productPrices with product names as keys and their prices as values. Write a C# function to calculate the total price of all products.
+
+3. Maximum Value
+Given a dictionary cityPopulations with city names as keys and their populations as values, write a C# code snippet to find the city with the maximum population.
+
+4. Minimum Value
+Create a dictionary examScores with student names as keys and their scores as values. Write a C# function to find the student with the minimum score.
+
+5. Average of Specific Values
+Given a dictionary studentGrades with student names as keys and their grades as values, write a C# code snippet to calculate the average grade of students who scored above 80.
+
+6. Count of Specific Values
+Create a dictionary productCategories with product names as keys and their categories as values. Write a C# function to count the number of products in the "Electronics" category.
+
+7. Dictionary Lookup
+Given a dictionary phoneBook with names as keys and phone numbers as values, write a C# code snippet to find the phone number of a specific person.
+
+8. Value Existence Check
+Create a dictionary productInventory with product names as keys and their quantities as values. Write a C# function to check if a specific product is in stock.
+
+9. Key Existence Check
+Given a dictionary userAccounts with usernames as keys and their account information as values, write a C# code snippet to check if a specific username is already taken.
+
+10. Dictionary Merge
+Create two dictionaries productPrices1 and productPrices2 with product names as keys and their prices as values. Write a C# function to merge the two dictionaries into a single dictionary.
+
