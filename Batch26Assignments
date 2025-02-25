@@ -1,8 +1,5 @@
-Homework
-Task:
+Assignment:
 
-Create a Shape base class with CalculateArea() (marked virtual).
+What is the worst -case time complexity of linear search?
 
-Derive Circle and Rectangle classes, overriding CalculateArea().
-
-Create a list of Shape objects and call CalculateArea() polymorphically.
+How would you modify linear search to return all occurrences of the target?
