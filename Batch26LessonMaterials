@@ -1,0 +1,114 @@
+Learning Objectives
+By the end of this lesson, students will be able to:
+
+Explain how linear search works and its use cases.
+
+Implement linear search in C# for arrays/lists.
+
+Analyze the algorithm’s time complexity.
+
+1. Introduction to Linear Search 
+What is Linear Search?
+
+A sequential search algorithm that checks each element in a collection until the target is found.
+
+Works on unsorted data.
+
+Real-World Analogy: Scanning a grocery list item by item to find "milk."
+
+Why Learn Linear Search?
+
+Simple to implement and understand.
+
+Foundation for learning more complex algorithms.
+
+2. Algorithm Steps 
+Steps:
+
+Start at the first element.
+
+Compare with the target.
+
+If matched, return the index.
+
+If not, move to the next element.
+
+If the end is reached, return -1.
+
+
+3. Hands-On Implementation in C# 
+Step 1: Write the Linear Search Method
+
+
+public static int LinearSearch(int[] array, int target)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] == target)
+        {
+            return i; // Return index if found  
+        }
+    }
+    return -1; // Return -1 if not found  
+}
+
+//Step 2: Test the Code
+
+    int[] numbers = { 4, 2, 9, 5, 7 };
+    int target = 9;
+    int result = LinearSearch(numbers, target);
+    Console.WriteLine(result); // Output: 2  
+
+    target = 3;
+    result = LinearSearch(numbers, target);
+    Console.WriteLine(result); // Output: -1 
+
+
+Step 3: Modify for Edge Cases
+
+Handle empty arrays:
+
+if (array == null || array.Length == 0) return -1;
+
+Return all occurrences (modify to return a list of indices). 
+
+4. Time Complexity Analysis 
+Best Case: O(1)(target is at index 0).
+
+Worst Case: O(n)(target not present or at last index).
+
+Average Case: O(n).
+
+Comparison with Built-in Methods:
+
+Array.IndexOf() uses linear search internally.
+
+Use linear search when you need custom logic (e.g., searching objects by a property).
+
+5. Common Mistakes & Best Practices
+Mistakes to Avoid:
+
+Not checking for null or empty arrays.
+
+Using foreach without tracking the index.
+
+Best Practices:
+
+Use for loops instead of foreach to track indices.
+
+Encapsulate the search logic in a reusable method.
+
+ Discussion 
+When is linear search a good choice?
+
+How would you handle searching for objects (e.g., List<Person>) by a property like Name?
+
+Why is linear search inefficient for large datasets?
+
+
+Additional Resources
+Documentation: C# Arrays
+
+Practice: Exercism C# Track*/
+
+
