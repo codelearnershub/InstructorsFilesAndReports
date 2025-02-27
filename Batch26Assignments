@@ -1,5 +1,3 @@
-Assignment:
+Recursion Assignment
 
-What is the worst -case time complexity of linear search?
-
-How would you modify linear search to return all occurrences of the target?
+Implement a recursive binary search algorithm in C#

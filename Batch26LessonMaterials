@@ -1,114 +1,89 @@
 Learning Objectives
 By the end of this lesson, students will be able to:
 
-Explain how linear search works and its use cases.
+Explain the concept of recursion and how it differs from iteration.
 
-Implement linear search in C# for arrays/lists.
+Write recursive functions in C# to solve problems.
 
-Analyze the algorithm’s time complexity.
+Identify base cases and recursive cases to prevent infinite recursion.
 
-1. Introduction to Linear Search 
-What is Linear Search?
+Debug common issues in recursive algorithms.
 
-A sequential search algorithm that checks each element in a collection until the target is found.
+Lesson Outline
+1. Introduction to Recursion (10 minutes)
+What is Recursion?
 
-Works on unsorted data.
+A function that calls itself directly or indirectly.
 
-Real-World Analogy: Scanning a grocery list item by item to find "milk."
+Example: Factorial calculation, directory traversal.
 
-Why Learn Linear Search?
+Key Components:
 
-Simple to implement and understand.
+Base Case: Condition to stop recursion (prevents infinite loops).
 
-Foundation for learning more complex algorithms.
+Recursive Case: Part where the function calls itself.
 
-2. Algorithm Steps 
-Steps:
+Recursion vs. Iteration: Discuss trade-offs (readability vs. performance).
 
-Start at the first element.
+2. How Recursion Works in C# (20 minutes)
+Example 1: Factorial Calculation
 
-Compare with the target.
+public static int Factorial(int n)  
+{  
+    // Base case  
+    if (n <= 1)  
+        return 1;  
+    // Recursive case  
+    return n * Factorial(n - 1);  
+}  
 
-If matched, return the index.
+Example 2: Fibonacci Sequence
 
-If not, move to the next element.
+public static int Fibonacci(int n)  
+{  
+    // Base cases  
+    if (n == 0) return 0;  
+    if (n == 1) return 1;  
+    // Recursive case  
+    return Fibonacci(n - 1) + Fibonacci(n - 2);  
+}  
 
-If the end is reached, return -1.
+4. When to Use Recursion
+Advantages:
 
+Cleaner code for problems with recursive nature (e.g., tree traversal).
 
-3. Hands-On Implementation in C# 
-Step 1: Write the Linear Search Method
+Natural fit for divide-and-conquer algorithms (e.g., QuickSort).
 
+Disadvantages:
 
-public static int LinearSearch(int[] array, int target)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        if (array[i] == target)
-        {
-            return i; // Return index if found  
-        }
-    }
-    return -1; // Return -1 if not found  
-}
+Risk of stack overflow for deep recursion.
 
-//Step 2: Test the Code
-
-    int[] numbers = { 4, 2, 9, 5, 7 };
-    int target = 9;
-    int result = LinearSearch(numbers, target);
-    Console.WriteLine(result); // Output: 2  
-
-    target = 3;
-    result = LinearSearch(numbers, target);
-    Console.WriteLine(result); // Output: -1 
-
-
-Step 3: Modify for Edge Cases
-
-Handle empty arrays:
-
-if (array == null || array.Length == 0) return -1;
-
-Return all occurrences (modify to return a list of indices). 
-
-4. Time Complexity Analysis 
-Best Case: O(1)(target is at index 0).
-
-Worst Case: O(n)(target not present or at last index).
-
-Average Case: O(n).
-
-Comparison with Built-in Methods:
-
-Array.IndexOf() uses linear search internally.
-
-Use linear search when you need custom logic (e.g., searching objects by a property).
-
-5. Common Mistakes & Best Practices
-Mistakes to Avoid:
-
-Not checking for null or empty arrays.
-
-Using foreach without tracking the index.
+Overhead of repeated function calls.
 
 Best Practices:
 
-Use for loops instead of foreach to track indices.
+Use recursion when the problem is inherently recursive.
 
-Encapsulate the search logic in a reusable method.
+Prefer iteration for simple loops or performance-critical code.
 
- Discussion 
-When is linear search a good choice?
+5. Common Pitfalls and Debugging 
 
-How would you handle searching for objects (e.g., List<Person>) by a property like Name?
+Stack Overflow: Caused by missing/base case or excessive recursion.
 
-Why is linear search inefficient for large datasets?
+Infinite Recursion: No base case or incorrect termination condition.
 
+Debugging Tips:
+
+Use breakpoints to trace call stacks.
+
+Validate base cases with small inputs.
 
 Additional Resources
-Documentation: C# Arrays
 
-Practice: Exercism C# Track*/
+Microsoft Docs: Recursion in C#
 
+GeeksforGeeks: Recursion vs. Iteration
+
+YouTube: Recursion Visualization
 
