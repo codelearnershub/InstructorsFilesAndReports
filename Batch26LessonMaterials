@@ -1,0 +1,89 @@
+Learning Objectives
+By the end of this lesson, students will be able to:
+
+Explain the concept of recursion and how it differs from iteration.
+
+Write recursive functions in C# to solve problems.
+
+Identify base cases and recursive cases to prevent infinite recursion.
+
+Debug common issues in recursive algorithms.
+
+Lesson Outline
+1. Introduction to Recursion (10 minutes)
+What is Recursion?
+
+A function that calls itself directly or indirectly.
+
+Example: Factorial calculation, directory traversal.
+
+Key Components:
+
+Base Case: Condition to stop recursion (prevents infinite loops).
+
+Recursive Case: Part where the function calls itself.
+
+Recursion vs. Iteration: Discuss trade-offs (readability vs. performance).
+
+2. How Recursion Works in C# (20 minutes)
+Example 1: Factorial Calculation
+
+public static int Factorial(int n)  
+{  
+    // Base case  
+    if (n <= 1)  
+        return 1;  
+    // Recursive case  
+    return n * Factorial(n - 1);  
+}  
+
+Example 2: Fibonacci Sequence
+
+public static int Fibonacci(int n)  
+{  
+    // Base cases  
+    if (n == 0) return 0;  
+    if (n == 1) return 1;  
+    // Recursive case  
+    return Fibonacci(n - 1) + Fibonacci(n - 2);  
+}  
+
+4. When to Use Recursion
+Advantages:
+
+Cleaner code for problems with recursive nature (e.g., tree traversal).
+
+Natural fit for divide-and-conquer algorithms (e.g., QuickSort).
+
+Disadvantages:
+
+Risk of stack overflow for deep recursion.
+
+Overhead of repeated function calls.
+
+Best Practices:
+
+Use recursion when the problem is inherently recursive.
+
+Prefer iteration for simple loops or performance-critical code.
+
+5. Common Pitfalls and Debugging 
+
+Stack Overflow: Caused by missing/base case or excessive recursion.
+
+Infinite Recursion: No base case or incorrect termination condition.
+
+Debugging Tips:
+
+Use breakpoints to trace call stacks.
+
+Validate base cases with small inputs.
+
+Additional Resources
+
+Microsoft Docs: Recursion in C#
+
+GeeksforGeeks: Recursion vs. Iteration
+
+YouTube: Recursion Visualization
+
