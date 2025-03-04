@@ -1,0 +1,106 @@
+Lesson Outline
+1. Introduction to Queues 
+What is a Queue?
+
+Analogies: A line of people waiting, printer job scheduling, or ticket counters.
+
+FIFO Principle: The first element added is the first removed.
+
+Generic vs. Non-Generic Queues:
+
+Queue<T> (type-safe) vs. Queue (legacy, stores object).
+
+Benefits of generics: Performance, type safety.
+
+Key Operations:
+
+Enqueue(T item): Add to the end of the queue.
+
+Dequeue(): Remove and return the front item.
+
+Peek(): Return the front item without removal.
+
+Count: Get the number of elements.
+
+2. Core Code Demonstration
+Create a Queue:
+
+Queue<string> ticketQueue = new Queue<string>();  
+
+Enqueue Elements:
+ticketQueue.Enqueue("Customer 1");  
+ticketQueue.Enqueue("Customer 2");  
+Console.WriteLine($"Count: {ticketQueue.Count}"); // Output: 2  
+
+Dequeue Elements
+string nextCustomer = ticketQueue.Dequeue(); // Returns "Customer 1"  
+Console.WriteLine(nextCustomer);  
+
+Peek and Error Handling:
+
+if (ticketQueue.Count > 0)  
+{  
+    Console.WriteLine(ticketQueue.Peek()); // "Customer 2"  
+}  
+else  
+{  
+    Console.WriteLine("Queue is empty!");  
+}  
+
+3. Hands-On Activity: Task Scheduler Simulation
+Task: Simulate a printer queue processing jobs in FIFO order.
+
+Steps:
+
+Initialize a Queue<string> to hold print jobs.
+
+Allow users to "add print jobs" (Enqueue).
+
+Simulate processing jobs (Dequeue) one by one.
+
+Stretch Goal: Add priority jobs (discuss limitations of basic queues).
+
+Sample Code:
+
+Queue<string> printQueue = new Queue<string>();  
+printQueue.Enqueue("Document1.pdf");  
+printQueue.Enqueue("Document2.pdf");  
+
+while (printQueue.Count > 0)  
+{  
+    string currentJob = printQueue.Dequeue();  
+    Console.WriteLine($"Printing: {currentJob}");  
+}  
+
+4. Common Use Cases & Best Practices 
+Use Cases:
+
+Order processing (e.g., e-commerce orders).
+
+Breadth-First Search (BFS) algorithms.
+
+Message queues in distributed systems.
+
+Best Practices:
+
+Always check Count before Dequeue() or Peek().
+
+Use Queue<T> over non-generic for type safety.
+
+Avoid using queues for random access; use List<T> instead.
+
+5. Assessment 
+Quiz:
+
+What is the output of this code?
+
+Queue<int> queue = new Queue<int>();  
+queue.Enqueue(2);  
+queue.Enqueue(5);  
+queue.Dequeue();  
+Console.WriteLine(queue.Peek()); // Output: 5  
+
+Additional Resources
+MSDN Documentation: Queue<T> Class
+
+LeetCode Problem: Breadth-First Search Example
