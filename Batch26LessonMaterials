@@ -1,89 +1,110 @@
-Learning Objectives
-By the end of this lesson, students will be able to:
-
-Explain the concept of recursion and how it differs from iteration.
-
-Write recursive functions in C# to solve problems.
-
-Identify base cases and recursive cases to prevent infinite recursion.
-
-Debug common issues in recursive algorithms.
-
 Lesson Outline
-1. Introduction to Recursion (10 minutes)
-What is Recursion?
+1. Introduction to Stacks
+What is a Stack?
 
-A function that calls itself directly or indirectly.
+Analogies: Stack of plates, undo/redo functionality.
 
-Example: Factorial calculation, directory traversal.
+LIFO Principle: Last element added is the first removed.
 
-Key Components:
+Generic vs. Non-Generic Stacks:
 
-Base Case: Condition to stop recursion (prevents infinite loops).
+Stack<T> (type-safe) vs. Stack (legacy, stores object).
 
-Recursive Case: Part where the function calls itself.
+Benefits of generics: Performance, type safety.
 
-Recursion vs. Iteration: Discuss trade-offs (readability vs. performance).
+Key Operations:
 
-2. How Recursion Works in C# (20 minutes)
-Example 1: Factorial Calculation
+Push(T item): Add to the top.
 
-public static int Factorial(int n)  
-{  
-    // Base case  
-    if (n <= 1)  
-        return 1;  
-    // Recursive case  
-    return n * Factorial(n - 1);  
-}  
+Pop(): Remove and return the top item.
 
-Example 2: Fibonacci Sequence
+Peek(): Return the top item without removal.
 
-public static int Fibonacci(int n)  
-{  
-    // Base cases  
-    if (n == 0) return 0;  
-    if (n == 1) return 1;  
-    // Recursive case  
-    return Fibonacci(n - 1) + Fibonacci(n - 2);  
-}  
+Count: Get the number of elements
 
-4. When to Use Recursion
-Advantages:
+2. Core Code Demonstration 
 
-Cleaner code for problems with recursive nature (e.g., tree traversal).
+Create a Stack:
+Stack<string> history = new Stack<string>();
 
-Natural fit for divide-and-conquer algorithms (e.g., QuickSort).
+Push Elements:
+history.Push("Page 1");
+history.Push("Page 2");
+Console.WriteLine($"Count: {history.Count}"); // Output: 2
 
-Disadvantages:
+Pop Elements:
+string lastPage = history.Pop(); // Returns "Page 2"
+Console.WriteLine(lastPage);
 
-Risk of stack overflow for deep recursion.
+Peek and Error Handling:
+if (history.Count > 0)
+{
+    Console.WriteLine(history.Peek()); // "Page 1"
+}
+else
+{
+    Console.WriteLine("Stack is empty!");
+}
 
-Overhead of repeated function calls.
+3. Hands-On Activity: Undo/Redo Simulation
+Task: Build a simple text editor with undo functionality.
+
+Steps:
+
+Initialize two stacks: undoStack and redoStack.
+
+Allow users to type text and "commit" changes to undoStack.
+
+Implement "Undo" (move from undoStack to redoStack).
+
+Stretch Goal: Add "Redo" functionality.
+
+Stack<string> undoStack = new Stack<string>();
+Stack<string> redoStack = new Stack<string>();
+string currentText = "";
+
+// Simulate user input
+currentText = "Hello";
+undoStack.Push(currentText);
+currentText = "Hello World";
+undoStack.Push(currentText);
+
+// Undo
+if (undoStack.Count > 0)
+{
+    redoStack.Push(currentText);
+    currentText = undoStack.Pop();
+    Console.WriteLine(currentText); // "Hello World"
+}
+
+4. Common Use Cases & Best Practices 
+Use Cases:
+
+Undo/redo in applications.
+
+Parsing expressions (e.g., checking balanced parentheses (()())).
+
+Depth-First Search (DFS) algorithms.
 
 Best Practices:
 
-Use recursion when the problem is inherently recursive.
+Always check Count before Pop() or Peek().
 
-Prefer iteration for simple loops or performance-critical code.
+Prefer Stack<T> over non-generic for type safety.
 
-5. Common Pitfalls and Debugging 
+Avoid using stacks for random access; use List<T> instead.
 
-Stack Overflow: Caused by missing/base case or excessive recursion.
+5. Assessment 
+Quiz:
 
-Infinite Recursion: No base case or incorrect termination condition.
-
-Debugging Tips:
-
-Use breakpoints to trace call stacks.
-
-Validate base cases with small inputs.
+What is the output of this code?
+Stack<int> stack = new Stack<int>();
+stack.Push(5);
+stack.Push(10);
+Console.Write(stack.Pop() + stack.Peek()); // Error! Stack has only one element after Pop().
 
 Additional Resources
+MSDN Documentation: Stack<T> Class
 
-Microsoft Docs: Recursion in C#
-
-GeeksforGeeks: Recursion vs. Iteration
-
-YouTube: Recursion Visualization
+LeetCode Problem: Valid Parentheses
 

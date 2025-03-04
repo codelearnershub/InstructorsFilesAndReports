@@ -1,3 +1,2 @@
-Recursion Assignment
-
-Implement a recursive binary search algorithm in C#
+Assignment: 
+Write a method to check if parentheses in a string are balanced using a stack
