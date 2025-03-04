@@ -1,2 +1,7 @@
-Assignment: 
-Write a method to check if parentheses in a string are balanced using a stack
+
+
+Assignment:
+
+Simulate a customer service ticketing system where tickets are processed in FIFO order.
+
+When would you use a queue instead of a stack?

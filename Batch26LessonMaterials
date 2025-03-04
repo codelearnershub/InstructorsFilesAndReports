@@ -1,110 +1,106 @@
 Lesson Outline
-1. Introduction to Stacks
-What is a Stack?
+1. Introduction to Queues 
+What is a Queue?
 
-Analogies: Stack of plates, undo/redo functionality.
+Analogies: A line of people waiting, printer job scheduling, or ticket counters.
 
-LIFO Principle: Last element added is the first removed.
+FIFO Principle: The first element added is the first removed.
 
-Generic vs. Non-Generic Stacks:
+Generic vs. Non-Generic Queues:
 
-Stack<T> (type-safe) vs. Stack (legacy, stores object).
+Queue<T> (type-safe) vs. Queue (legacy, stores object).
 
 Benefits of generics: Performance, type safety.
 
 Key Operations:
 
-Push(T item): Add to the top.
+Enqueue(T item): Add to the end of the queue.
 
-Pop(): Remove and return the top item.
+Dequeue(): Remove and return the front item.
 
-Peek(): Return the top item without removal.
+Peek(): Return the front item without removal.
 
-Count: Get the number of elements
+Count: Get the number of elements.
 
-2. Core Code Demonstration 
+2. Core Code Demonstration
+Create a Queue:
 
-Create a Stack:
-Stack<string> history = new Stack<string>();
+Queue<string> ticketQueue = new Queue<string>();  
 
-Push Elements:
-history.Push("Page 1");
-history.Push("Page 2");
-Console.WriteLine($"Count: {history.Count}"); // Output: 2
+Enqueue Elements:
+ticketQueue.Enqueue("Customer 1");  
+ticketQueue.Enqueue("Customer 2");  
+Console.WriteLine($"Count: {ticketQueue.Count}"); // Output: 2  
 
-Pop Elements:
-string lastPage = history.Pop(); // Returns "Page 2"
-Console.WriteLine(lastPage);
+Dequeue Elements
+string nextCustomer = ticketQueue.Dequeue(); // Returns "Customer 1"  
+Console.WriteLine(nextCustomer);  
 
 Peek and Error Handling:
-if (history.Count > 0)
-{
-    Console.WriteLine(history.Peek()); // "Page 1"
-}
-else
-{
-    Console.WriteLine("Stack is empty!");
-}
 
-3. Hands-On Activity: Undo/Redo Simulation
-Task: Build a simple text editor with undo functionality.
+if (ticketQueue.Count > 0)  
+{  
+    Console.WriteLine(ticketQueue.Peek()); // "Customer 2"  
+}  
+else  
+{  
+    Console.WriteLine("Queue is empty!");  
+}  
+
+3. Hands-On Activity: Task Scheduler Simulation
+Task: Simulate a printer queue processing jobs in FIFO order.
 
 Steps:
 
-Initialize two stacks: undoStack and redoStack.
+Initialize a Queue<string> to hold print jobs.
 
-Allow users to type text and "commit" changes to undoStack.
+Allow users to "add print jobs" (Enqueue).
 
-Implement "Undo" (move from undoStack to redoStack).
+Simulate processing jobs (Dequeue) one by one.
 
-Stretch Goal: Add "Redo" functionality.
+Stretch Goal: Add priority jobs (discuss limitations of basic queues).
 
-Stack<string> undoStack = new Stack<string>();
-Stack<string> redoStack = new Stack<string>();
-string currentText = "";
+Sample Code:
 
-// Simulate user input
-currentText = "Hello";
-undoStack.Push(currentText);
-currentText = "Hello World";
-undoStack.Push(currentText);
+Queue<string> printQueue = new Queue<string>();  
+printQueue.Enqueue("Document1.pdf");  
+printQueue.Enqueue("Document2.pdf");  
 
-// Undo
-if (undoStack.Count > 0)
-{
-    redoStack.Push(currentText);
-    currentText = undoStack.Pop();
-    Console.WriteLine(currentText); // "Hello World"
-}
+while (printQueue.Count > 0)  
+{  
+    string currentJob = printQueue.Dequeue();  
+    Console.WriteLine($"Printing: {currentJob}");  
+}  
 
 4. Common Use Cases & Best Practices 
 Use Cases:
 
-Undo/redo in applications.
+Order processing (e.g., e-commerce orders).
 
-Parsing expressions (e.g., checking balanced parentheses (()())).
+Breadth-First Search (BFS) algorithms.
 
-Depth-First Search (DFS) algorithms.
+Message queues in distributed systems.
 
 Best Practices:
 
-Always check Count before Pop() or Peek().
+Always check Count before Dequeue() or Peek().
 
-Prefer Stack<T> over non-generic for type safety.
+Use Queue<T> over non-generic for type safety.
 
-Avoid using stacks for random access; use List<T> instead.
+Avoid using queues for random access; use List<T> instead.
 
 5. Assessment 
 Quiz:
 
 What is the output of this code?
-Stack<int> stack = new Stack<int>();
-stack.Push(5);
-stack.Push(10);
-Console.Write(stack.Pop() + stack.Peek()); // Error! Stack has only one element after Pop().
+
+Queue<int> queue = new Queue<int>();  
+queue.Enqueue(2);  
+queue.Enqueue(5);  
+queue.Dequeue();  
+Console.WriteLine(queue.Peek()); // Output: 5  
 
 Additional Resources
-MSDN Documentation: Stack<T> Class
+MSDN Documentation: Queue<T> Class
 
-LeetCode Problem: Valid Parentheses
-
+LeetCode Problem: Breadth-First Search Example
