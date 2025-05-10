@@ -1,0 +1,113 @@
+// Topic: Polymorphism
+
+//Outline of our discussion on the topic
+
+// Why overload a method in a class
+// how to implement a method to be overloaded in parent class
+// How to imlement overload a method in a child class 
+
+// Why override a method in a class
+// how to implement a method to be overided in parent class
+// How to implement overide a method in a child class 
+
+// Why hiding a method in a class
+// how to implement a method to be hiden in parent class
+// How to hide a method in a child class 
+
+//we defined a parent and child class
+//we implemented method overload, overiding and hiding
+
+Child child = new Child("Ade", "Chuckwu", "Danjuma", "Abuja", 1990);
+child.Snour(); // the can only have access to the overidden method in his class
+child.GetAge();
+Child.Eat(); // this is the inherited method, the can still have access to the inherited method after overlaoding it
+
+Console.WriteLine("How many times do you eat daily");
+int input = int.Parse(Console.ReadLine());
+
+Child.Eat(input); //this is the inherited method that is overloaded
+Child.Sleeping();
+Child.Walking();
+child.PrintDetails();
+public class Father
+{
+    public string SurName { get; set; }
+    public string StateOfOrigin { get; set; }
+
+    public Father(string surName, string stateOfOrigin)
+    {
+        SurName = surName;
+        StateOfOrigin = stateOfOrigin;
+    }
+
+    public static void Walking() // This cannot be overidden but it can be overlaoded and hide
+    {
+        Console.WriteLine("I walk slowly");
+    }
+
+    private static void Reading() // this is a private, it cannot be inherited and we cannot set it as virtual becauuse it is limited this calss
+    {
+        Console.WriteLine("I read everyday");
+    }
+
+    public virtual void Snour() // this is a virtual method to be overided
+    {
+        Console.WriteLine("I snour loudly");
+    }
+
+    public static void Eat() // this is a none virtual method to be overloaded
+    {
+        Console.WriteLine("I eat once daily");
+    }
+
+    public static void Sleeping() // this is a none virtual method to be hiden
+    {
+        Console.WriteLine("I sleep early");
+    }
+
+}
+
+public class Child : Father
+{
+    public string FirstName { get; set; }
+    public string MiddleName { get; set; }
+    public int YearOfBirth { get; set; }
+
+    public Child(string firstName, string middleName, string surName, string stateOfOrigin, int yearOfBirth) : base(surName, stateOfOrigin)
+    {
+        FirstName = firstName;
+        MiddleName = middleName;
+        YearOfBirth = yearOfBirth;
+    }
+
+    public void GetAge()
+    {
+        int currentYear = DateTime.Now.Year;
+        int age = currentYear - this.YearOfBirth;
+        Console.WriteLine($"{this.FirstName} current age is : {age}");
+    }
+
+    //overiding the snour method
+    public override void Snour() // we must include the overide keyword
+    {
+        Console.WriteLine("My snouring is not loud as my father");
+    }
+
+    //Overloading the Eat method. the inherited method will still be available for the child. the child can still have access to the implementation this method in the parent class
+    public static void Eat(int squareMeal)
+    {
+        Console.WriteLine($"I eat {squareMeal} times daily)");
+    }
+
+    // we cannot overlaod an hidden method and the child cannot access to the implementation this method in the parent class
+    public static new void Sleeping() 
+    {
+        Console.WriteLine("I sleep late");
+    }
+
+    public void PrintDetails()
+    {
+        Console.WriteLine($"These are the details of this child\n Surname : {SurName}\n FirstName : {FirstName}\n MiddleName : {MiddleName}\n State Of Origin :{StateOfOrigin}\n Year Of Birth : {YearOfBirth}");
+    }
+
+}
