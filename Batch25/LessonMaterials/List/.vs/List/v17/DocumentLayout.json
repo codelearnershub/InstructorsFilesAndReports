@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\DADA\\Desktop\\List\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2D8DC066-ADA7-4722-A4AD-270C2BE4C12C}|List.csproj|c:\\users\\dada\\desktop\\list\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D8DC066-ADA7-4722-A4AD-270C2BE4C12C}|List.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D8DC066-ADA7-4722-A4AD-270C2BE4C12C}|List.csproj|c:\\users\\dada\\desktop\\list\\assesment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D8DC066-ADA7-4722-A4AD-270C2BE4C12C}|List.csproj|solutionrelative:assesment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D8DC066-ADA7-4722-A4AD-270C2BE4C12C}|List.csproj|c:\\users\\dada\\desktop\\list\\list.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{2D8DC066-ADA7-4722-A4AD-270C2BE4C12C}|List.csproj|solutionrelative:list.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Assesment.cs",
+              "DocumentMoniker": "C:\\Users\\DADA\\Desktop\\List\\Assesment.cs",
+              "RelativeDocumentMoniker": "Assesment.cs",
+              "ToolTip": "C:\\Users\\DADA\\Desktop\\List\\Assesment.cs",
+              "RelativeToolTip": "Assesment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T08:24:32.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "List",
+              "DocumentMoniker": "C:\\Users\\DADA\\Desktop\\List\\List.csproj",
+              "RelativeDocumentMoniker": "List.csproj",
+              "ToolTip": "C:\\Users\\DADA\\Desktop\\List\\List.csproj",
+              "RelativeToolTip": "List.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-16T08:24:02.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\DADA\\Desktop\\List\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\DADA\\Desktop\\List\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAAQAAABxAQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T10:19:58.284Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
